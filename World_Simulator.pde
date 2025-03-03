@@ -3,6 +3,8 @@ ArrayList<Resource> resources = new ArrayList<Resource>();
 
 
 void setup() {
+  size(1000,800);
+  background(200);
   setupJobList();
   setupResourcesList();
 }
