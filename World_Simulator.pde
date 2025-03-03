@@ -25,7 +25,7 @@ void setupJobList() {
   jobs.add(new Job("Mayor", 1));
   jobs.add(new Job("Butcher", 1));
   jobs.add(new Job("Clothing Maker", 1));
-  jobs.add(new Job("Priest", 1))
+  jobs.add(new Job("Priest", 1));
 }
 
 void setupResourcesList() {
