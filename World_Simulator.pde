@@ -1,18 +1,18 @@
 ArrayList<Job> jobs = new ArrayList<Job>();
 ArrayList<Resource> resources = new ArrayList<Resource>();
 boolean jesus;
+ArrayList<String> firstNames = new ArrayList<String>();
 
 
 void setup() {
-  size(1000,800);
+  size(1000, 800);
   background(200);
   setupJobList();
   setupResourcesList();
-  
+  println(randomName());
 }
 
 void draw() {
-  
 }
 
 void setupJobList() {
@@ -38,7 +38,7 @@ ArrayList<Job> getJobList() {
 }
 
 Job getJobIndex(int i) {
-    return jobs.get(i);
+  return jobs.get(i);
 }
 
 void setupResourcesList() {
@@ -59,5 +59,11 @@ ArrayList<Resource> getResourcesList() {
 }
 
 Resource getResourceIndex(int i) {
-    return resources.get(i);
+  return resources.get(i);
+}
+
+String randomName() {
+  // Load liste fra internettet
+  String[] names = loadStrings("names.txt");
+  return names[(int)random(1, names.length)];
 }
