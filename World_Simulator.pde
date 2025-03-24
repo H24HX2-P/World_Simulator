@@ -1,5 +1,6 @@
 ArrayList<Job> jobs = new ArrayList<Job>();
 ArrayList<Resource> resources = new ArrayList<Resource>();
+boolean jesus;
 
 
 void setup() {
@@ -7,6 +8,7 @@ void setup() {
   background(200);
   setupJobList();
   setupResourcesList();
+  
 }
 
 void draw() {
@@ -28,6 +30,15 @@ void setupJobList() {
   jobs.add(new Job("Butcher", 1));
   jobs.add(new Job("Clothing Maker", 1));
   jobs.add(new Job("Priest", 1));
+  jobs.add(new Job("Jesus", 1));
+}
+
+ArrayList<Job> getJobList() {
+  return jobs;
+}
+
+Job getJobIndex(int i) {
+    return jobs.get(i);
 }
 
 void setupResourcesList() {
@@ -41,4 +52,12 @@ void setupResourcesList() {
   resources.add(new Resource("Wool", 0));
   resources.add(new Resource("Food", 0));
   resources.add(new Resource("Money", 0));
+}
+
+ArrayList<Resource> getResourcesList() {
+  return resources;
+}
+
+Resource getResourceIndex(int i) {
+    return resources.get(i);
 }
