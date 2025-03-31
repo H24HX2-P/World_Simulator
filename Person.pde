@@ -17,4 +17,5 @@ class Person {
   void jobChange(Job newJob) {
     this.job = newJob;
   }
+  
 }

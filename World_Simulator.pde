@@ -12,7 +12,8 @@ void setup() {
   setupJobList();
   setupResourcesList();
   setupPeople();
-  println(randomName());
+  getJobName();
+  getResourceAmount();
 }
 
 void draw() {
@@ -58,16 +59,12 @@ void setupResourcesList() {
 }
 
 
-void setupPeople(){
-   for(int i = 0; i < jobs.size(); i++) {
-     people.add(new Person(0, randomName(), jobs.get(i))); 
-   }
+void setupPeople() {
+  for (int i = 0; i < jobs.size(); i++) {
+    people.add(new Person(0, randomName(), jobs.get(i)));
+  }
 }
 
-
-//void PriestJob(){
- //  String Priest;
-  // people.add
 
 ArrayList<Resource> getResourcesList() {
   return resources;
@@ -81,5 +78,15 @@ String randomName() {
   // Load liste fra internettet
   String[] names = loadStrings("names.txt");
   return names[(int)random(1, names.length)];
+}
 
+void getJobName() {
+  for (int i = 0; i < people.size(); i++){
+    println(people.get(i).name + " " + people.get(i).job.name);
+  }
+}
+
+void getResourceAmount(){
+  for(int i = 0; i < resources.size(); i++)
+  println(resources.get(i));
 }

@@ -11,5 +11,4 @@ class Job {
   void salaryChange(int changeInSalary) {
     this.salary = this.salary + changeInSalary;
   }
-  
 }
