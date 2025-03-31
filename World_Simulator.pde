@@ -1,19 +1,21 @@
 ArrayList<Job> jobs = new ArrayList<Job>();
 ArrayList<Resource> resources = new ArrayList<Resource>();
 ArrayList<Person> people = new ArrayList<Person>();
+boolean jesus;
+ArrayList<String> firstNames = new ArrayList<String>();
+
 
 
 void setup() {
-  size(1000,800);
+  size(1000, 800);
   background(200);
   setupJobList();
   setupResourcesList();
   setupPeople();
-  
+  println(randomName());
 }
 
 void draw() {
-  
 }
 
 void setupJobList() {
@@ -31,6 +33,15 @@ void setupJobList() {
   jobs.add(new Job("Butcher", 1));
   jobs.add(new Job("Clothing Maker", 1));
   jobs.add(new Job("Priest", 1));
+  jobs.add(new Job("Jesus", 1));
+}
+
+ArrayList<Job> getJobList() {
+  return jobs;
+}
+
+Job getJobIndex(int i) {
+  return jobs.get(i);
 }
 
 void setupResourcesList() {
@@ -49,12 +60,26 @@ void setupResourcesList() {
 
 void setupPeople(){
    for(int i = 0; i < jobs.size(); i++) {
-     people.add(new Person(0, "John", jobs.get(i))); // Implementer random navne
+     people.add(new Person(0, randomName(), jobs.get(i))); 
    }
 }
 
 
-void PriestJob(){
-   String Priest;
-   people.add
+//void PriestJob(){
+ //  String Priest;
+  // people.add
+
+ArrayList<Resource> getResourcesList() {
+  return resources;
+}
+
+Resource getResourceIndex(int i) {
+  return resources.get(i);
+}
+
+String randomName() {
+  // Load liste fra internettet
+  String[] names = loadStrings("names.txt");
+  return names[(int)random(1, names.length)];
+
 }
