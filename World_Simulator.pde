@@ -1,5 +1,6 @@
 ArrayList<Job> jobs = new ArrayList<Job>();
 ArrayList<Resource> resources = new ArrayList<Resource>();
+ArrayList<Person> people = new ArrayList<Person>();
 
 
 void setup() {
@@ -7,6 +8,8 @@ void setup() {
   background(200);
   setupJobList();
   setupResourcesList();
+  setupPeople();
+  
 }
 
 void draw() {
@@ -41,4 +44,17 @@ void setupResourcesList() {
   resources.add(new Resource("Wool", 0));
   resources.add(new Resource("Food", 0));
   resources.add(new Resource("Money", 0));
+}
+
+
+void setupPeople(){
+   for(int i = 0; i < jobs.size(); i++) {
+     people.add(new Person(0, "John", jobs.get(i))); // Implementer random navne
+   }
+}
+
+
+void PriestJob(){
+   String Priest;
+   people.add
 }
