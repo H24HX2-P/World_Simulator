@@ -10,7 +10,7 @@ class Jesus {
   }
   
   void birthday() {
-    if(this.age == 33){
+    if(this.age >= 33){
       jesus = false;
     }
     this.age++;

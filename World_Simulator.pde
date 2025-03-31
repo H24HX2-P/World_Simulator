@@ -1,9 +1,8 @@
 ArrayList<Job> jobs = new ArrayList<Job>();
 ArrayList<Resource> resources = new ArrayList<Resource>();
 ArrayList<Person> people = new ArrayList<Person>();
-boolean jesus;
 ArrayList<String> firstNames = new ArrayList<String>();
-
+boolean jesus;
 
 
 void setup() {
@@ -56,6 +55,9 @@ void setupResourcesList() {
   resources.add(new Resource("Wool", 0));
   resources.add(new Resource("Food", 0));
   resources.add(new Resource("Money", 0));
+  resources.add(new Resource("Clothing", 0));
+  resources.add(new Resource("House", 0));
+  resources.add(new Resource("Research Points", 0));
 }
 
 
@@ -88,5 +90,5 @@ void getJobName() {
 
 void getResourceAmount(){
   for(int i = 0; i < resources.size(); i++)
-  println(resources.get(i));
+  println(resources.get(i).type);
 }

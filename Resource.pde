@@ -2,12 +2,11 @@ class Resource {
   
   String type;
   int amount;
-  String name;
+ 
   
-   Resource(String type, String name, int amount) {
+   Resource(String type, int amount) {
     this.type = type;
     this.amount = amount;
-    this.name = name;
   }
   
   void addResource(int amountToAdd) {
